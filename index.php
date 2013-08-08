@@ -129,38 +129,11 @@
 						<span><?php $content->out( 'contact', 'header-text' ); ?></span>
 					</header>
 					<div>
-						<div class="row">
-							<div class="12u">
-								<form method="post" action="#">
-									<div>
-										<div class="row half">
-											<div class="6u">
-												<input type="text" name="name" id="name" placeholder="Name" />
-											</div>
-											<div class="6u">
-												<input type="text" name="email" id="email" placeholder="Email" />
-											</div>
-										</div>
-										<div class="row half">
-											<div class="12u">
-												<input type="text" name="subject" id="subject" placeholder="Subject" />
-											</div>
-										</div>
-										<div class="row half">
-											<div class="12u">
-												<textarea name="message" id="message" placeholder="Message"></textarea>
-											</div>
-										</div>
-										<div class="row">
-											<div class="12u">
-												<a href="#" class="button form-button-submit">Send Message</a>
-												<a href="#" class="button button-alt form-button-reset">Clear Form</a>
-											</div>
-										</div>
-									</div>
-								</form>
-							</div>
-						</div>
+						<?php
+						if ( isset( $contact_form ) ) :
+						    include $contact_form->template_path();
+						endif;
+						?>
 						<div class="row row-special">
 							<div class="12u">
 								<h3>Find me on ...</h3>
