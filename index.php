@@ -14,20 +14,22 @@
 		<meta name="author" content="<?php $settings->out( 'site-meta', 'author' ); ?>">
 		
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet" />
+	
+		<script>
+		var leeflets_template_path = '<?php addslashes( $template->url() ); ?>';
+		</script>
 		
-		<script src="<?php $template->url( 'js/jquery.min.js' ); ?>"></script>
-		<script src="<?php $template->url( 'js/config.js' ); ?>"></script>
-		<script src="<?php $template->url( 'js/skel.min.js' ); ?>"></script>
+	    <?php $hook->apply( 'head' ); ?>
 	
-		<link rel="stylesheet" href="<?php $template->url( 'css/skel-noscript.css' ); ?>" />
-		<link rel="stylesheet" href="<?php $template->url( 'css/style.css' ); ?>" />
-		<link rel="stylesheet" href="<?php $template->url( 'css/style-desktop.css' ); ?>" />
-	
+		<noscript>
+			<link rel="stylesheet" href="<?php $template->url( 'css/skel-noscript.css' ); ?>" />
+			<link rel="stylesheet" href="<?php $template->url( 'css/style.css' ); ?>" />
+			<link rel="stylesheet" href="<?php $template->url( 'css/style-desktop.css' ); ?>" />
+		</noscript>
+
 		<!--[if lte IE 9]><link rel="stylesheet" href="<?php $template->url( 'css/ie9.css' ); ?>" /><![endif]-->
 		<!--[if lte IE 8]><script src="<?php $template->url( 'js/html5shiv.js' ); ?>"></script><link rel="stylesheet" href="<?php $template->url( 'css/ie8.css' ); ?>" /><![endif]-->
 		<!--[if lte IE 7]><link rel="stylesheet" href="<?php $template->url( 'css/ie7.css' ); ?>" /><![endif]-->
-	
-	    <?php $hook->apply( 'head' ); ?>
 	</head>
 	<body>
 
